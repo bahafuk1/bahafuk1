@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Korean ShXt Blocker
 // @namespace  http://home.gamer.com.tw/document
-// @version    1.0
+// @version    1.1
 // @description  Auto block korean XX in Bahamut
 // @match      http://forum.gamer.com.tw/B.php*
 // @copyright  2013+, http://home.gamer.com.tw/document
