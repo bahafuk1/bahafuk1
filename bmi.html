@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>BMI計算</title>
+</head>
+<body>
+<div style="width: 40px;margin:0 auto;">
+身高：<input type="text" id="height"/><br/><br/>
+體重：<input type="text" id="weight"/><br/><br/>
+<input type="button" value="　計算　" id="calc"/>
+</div>
+<table>
+    <tr>
+        <td>評語</td>
+        <td>bmi值</td>
+    </tr>
+    <tr>
+        <td>過輕</td>
+        <td>bmi &lt; 18.5</td>
+    </tr>
+    <tr>
+        <td>正常</td>
+        <td>18.5 ≦ bmi &lt; 24</td>
+    </tr>
+    <tr>
+        <td>過重</td>
+        <td>24 ≦ bmi &lt; 27</td>
+    </tr>
+    <tr>
+        <td>輕度肥胖</td>
+        <td>27 ≦ bmi &lt; 30</td>
+    </tr>
+    <tr>
+        <td>中度肥胖</td>
+        <td>30 ≦ bmi &lt; 35</td>
+    </tr>
+    <tr>
+        <td>重度肥胖</td>
+        <td>bmi ≧ 35</td>
+    </tr>
+</table>
+<div>
+資源來源：行政院衛生署
+</div>
+<script type="text/javascript">
+(function (d){    
+  var _x = 1.3,
+		_y = 2.5;
+	function $(i){return d.getElementById(i);}
+
+	function newBMI(h, w) {
+		return ((w * _x) / (Math.pow(h, 2.5)));
+	}
+	function oldBMI(h, w) {
+		return (w / (Math.pow(h, 2)));
+	}
+	
+	$('calc').onclick = function(){
+		var h = ($('height').value > 5) ? ($('height').value / 100) : $('height').value,
+			w = $('weight').value;
+		alert('舊版BMI結果：' + oldBMI(h, w) + '\n新版BMI結果：' + newBMI(h, w));
+	};
+})(document);
+</script>
+</body>
+</html>
